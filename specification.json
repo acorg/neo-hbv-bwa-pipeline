@@ -19,7 +19,7 @@
         },
         {
             "cwd": "03-bwa-mem",
-            "dependencies": ["map"],
+            "dependencies": ["start"],
             "name": "bwa-mem",
             "script": "./sbatch.sh"
         },
