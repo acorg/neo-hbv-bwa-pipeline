@@ -5,7 +5,7 @@
 task=$1
 log=$logDir/$task.log
 fastq=$dataDir/$task.trim.fastq.gz
-out=$task.hbv.fastq.gz
+out=$task-hbv.fastq.gz
 
 logStepStart $log
 logTaskToSlurmOutput $task $log

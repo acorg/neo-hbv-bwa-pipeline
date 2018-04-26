@@ -14,7 +14,7 @@ then
     exclusive=
     echo "  Simulating or skipping. Not requesting exclusive node." >> $log
 else
-    # Request an exclusive machine because map.sh will tell bwa and
+    # Request an exclusive machine because bwa-aln-l.sh  will tell bwa and
     # samtools to use as many threads as possible.
     exclusive=--exclusive
     echo "  Not simulating or skipping. Requesting exclusive node." >> $log

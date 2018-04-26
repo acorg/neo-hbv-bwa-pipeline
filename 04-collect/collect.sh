@@ -5,7 +5,7 @@
 # The log file is the top-level sample log file, seeing as this step is a
 # 'collect' step that is only run once.
 log=$sampleLogFile
-out=$task.hbv.fastq
+out=$(sampleName)-hbv.fastq
 
 logStepStart $log
 logTaskToSlurmOutput collect $log
@@ -31,7 +31,7 @@ function collect()
         echo "    Task $task fastq:" >> $log
         for i in 01-bwa-aln 02-bwa-aln-l 03-bwa-mem
         do
-            f=../$i/$task.hbv.fastq.gz
+            f=../$i/$task-hbv.fastq.gz
             echo "      $f" >> $log
             fastq="$fastq $f"
         done
