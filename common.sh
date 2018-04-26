@@ -123,11 +123,11 @@ function checkFastq()
     local fastq=$1
     local log=$2
 
-    echo "  Checking FASTQ file '$fastq'." >> $log
-
     set +e
-    if [ ! -f $fastq ]
+    if [ -f $fastq ]
     then
+        echo "  FASTQ file '$fastq' exists." >> $log
+    else
         echo "  FASTQ file '$fastq' does not exist, according to test -f." >> $log
 
         if [ -L $fastq ]

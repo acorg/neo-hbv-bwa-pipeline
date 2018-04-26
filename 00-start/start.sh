@@ -41,9 +41,9 @@ tasks=$(tasksForSample)
 
 for task in $tasks
 do
+    echo "  Task $task will use FASTQ $fastq" >> $log
     fastq=$dataDir/$task.trim.fastq.gz
     checkFastq $fastq $log
-    echo "  task $task, FASTQ $fastq" >> $log
 done
 
 for task in $tasks
