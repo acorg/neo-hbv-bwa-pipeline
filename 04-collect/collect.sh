@@ -37,7 +37,7 @@ function collect()
         done
     done
 
-    zcat $fastq | filter-fasta.py --quiet --removeDuplicatesById > $out
+    zcat $fastq | filter-fasta.py --quiet --removeDuplicatesById --fastq > $out
     echo "  FASTQ collection stopped at `date`" >> $log
 }
 
