@@ -8,7 +8,7 @@ ourLogDir=../logs
 rm -fr $ourLogDir
 mkdir $ourLogDir || {
     # SLURM will catch this output and put it into slurm-N.out where N is
-    # out job id.
+    # our job id.
     echo "$0: Could not create log directory '$ourLogDir'!" >&2
     exit 1
 }
