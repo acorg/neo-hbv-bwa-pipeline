@@ -8,7 +8,7 @@ log=$logDir/sbatch.log
 # 'out' must have the identical value set in bwa-mem.sh
 out=$task-hbv.fastq.gz
 
-echo "03-bwa-mem sbatch.sh running at `date`" >> $log
+echo "$(basename $(pwd)) sbatch.sh running at $(date)" >> $log
 echo "  Task is $task" >> $log
 echo "  Dependencies are $SP_DEPENDENCY_ARG" >> $log
 
